@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict person's earnings (classic adult dataset)</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <label>age:</label>
+            <input type="float" name="age" id="age" placeholder="age" value="25" ><br><br>
+            <label>workclass:</label>
+            <input type="str" name="workclass" id="workclass" placeholder="workclass" value="Private"><br><br>
+            <label>fnlwgt:</label>
+            <input type="float" name="fnlwgt" id="fnlwgt" placeholder="fnlwgt" value="226802"><br><br>
+            <label>education:</label>
+            <input type="str" name="education" id="education" placeholder="education" value="11th"><br><br>
+            <label>education_num:</label>
+            <input type="float" name="education_num" id="education_num" placeholder="education_num" value="7"><br><br>
+            <label>marital_status:</label>
+            <input type="str" name="marital_status" id="marital_status" placeholder="marital_status" value="Never-married"><br><br>
+            <label>occupation:</label>
+            <input type="str" name="occupation" id="occupation" placeholder="occupation" value="Machine-op-inspct"><br><br>
+            <label>relationship:</label>
+            <input type="str" name="relationship" id="relationship" placeholder="relationship" value="Own-child"><br><br>
+            <label>race:</label>
+            <input type="str" name="race" id="race" placeholder="race" value="Black"><br><br>
+            <label>sex:</label>
+            <input type="str" name="sex" id="sex" placeholder="sex" value="Male"><br><br>
+            <label>capital_gain:</label>
+            <input type="float" name="capital_gain" id="capital_gain" placeholder="capital_gain" value="0"><br><br>
+            <label>capital_loss:</label>
+            <input type="float" name="capital_loss" id="capital_loss" placeholder="capital_loss" value="0"><br><br>
+            <label>hours_per_week:</label>
+            <input type="float" name="hours_per_week" id="hours_per_week" placeholder="hours_per_week" value="40"><br><br>
+            <label>native_country:</label>
+            <input type="str" name="native_country" id="native_country" placeholder="native_country" value="United-States"><br><br>
+
+
+            <input type="submit" value="Predict">
+
+            <h3 style="text-align:left">Another example of values- 44,Private,160323,Some-college,10,Married-civ-spouse,Machine-op-inspct,Husband,Black,Male,7688,0,40,United-States</h3>
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}
