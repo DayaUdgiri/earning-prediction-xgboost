@@ -43,4 +43,4 @@ Dominican-Republic, Laos, Ecuador, Taiwan, Haiti, Columbia,Hungary, Guatemala, N
 
 The XGboost Classifier model along with basic web frontend is deployed in Heroku to take input and provide prediction.Then basic website with flask api and deploy it along with model on Heroku.
 
-https://XGBoost_earning_prediction.herokuapp.com/
+https://earning-prediction-xgboost.herokuapp.com/predict
